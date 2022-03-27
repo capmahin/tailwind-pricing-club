@@ -16,7 +16,11 @@ const NavBar = () => {
       <div onClick={() => setOpen(!open)} className="w-6 h-6 md:hidden">
         {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
       </div>
-      <ul className="md:flex justify-center">
+      <ul
+        className={`md:flex justify-center absolute ${
+          open ? "top-6" : "top-[-120px]"
+        }`}
+      >
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
