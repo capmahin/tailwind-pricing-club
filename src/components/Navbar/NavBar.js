@@ -12,12 +12,12 @@ const NavBar = () => {
     { id: 5, name: "cupons", link: "/cupons" },
   ];
   return (
-    <nav>
+    <nav className="bg-indigo-200">
       <div onClick={() => setOpen(!open)} className="w-6 h-6 md:hidden">
         {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
       </div>
       <ul
-        className={`md:flex justify-center absolute duration-500 ease-in ${
+        className={`md:flex justify-center bg-indigo-200 w-full absolute md:static duration-500 ease-in ${
           open ? "top-6" : "top-[-120px]"
         }`}
       >
